@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+.Index {
+  height: 100vh;
+  flex-direction: column;
+}
+
+.Index,
+.Index-searchBox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.SongItem {
+  display: flex;
+  width: 100%;
+  padding: 1%;
+}
+
+.SongItem-leftBox-albumImage {
+  width: 60px;
+  height: auto;
+}
+
+.SongItem > a {
+  width: 100%;
+  display: flex;
+  color: #212121;
+}
+
+.Index-searchBox-input {
+  margin: 0% 4% 0% 4% !important;
+}
+
+.Index-searchBox-input,
+.SongItem-rightBox-songName,
+.SongItem-rightBox-albumName,
+.SongItem-rightBox-artistName,
+.Index-results-legend {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.SongItem {
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.SongItem:hover {
+  background-color: #EEEEEE;
+}
+
+.SongItem-rightBox {
+  width: 80%;
+}
+
+.SongItem-leftBox {
+  width: 20%;
+}
+
+.SongItem-rightBox-songName,
+.Index-results-legend {
+  font-size: 0.9em;
+  margin: 0;
+  font-weight: bold;
+}
+
+.SongItem-rightBox-albumName {
+  font-size: 0.8em;
+  margin: 2px 0px 2px 0px;
+}
+
+.SongItem-rightBox-artistName {
+  font-size: 0.7em;
+  margin: 4px 0px 0px 0px;
+}
+
+.Index-card {
+  width: 40%;
+}
+
+.Index-results-card {
+  width: 40%;
+}

@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+.Player {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.Player-card-leftBox {
+  width: 35%;
+}
+
+.Player-card-rightBox {
+  width: 65%;
+  display: flex;
+  flex-direction: column;
+
+}
+
+.Player-card-rightBox-song,
+.Player-card-rightBox-artist {
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.Player-card-rightBox-artist {
+  font-size: 0.9em;
+}
+
+.Player-card-rightBox-song {
+  font-size: 1.4em;
+
+}
+
+.Player-card-leftBox-image {
+  width: 250px;
+  height: auto;
+  margin-left: -50%;
+}

@@ -1,0 +1,6 @@
+export const SEARCH_SONG = "SEARCH_SONG"
+export const PLAY_SONG = "PLAY_SONG"
+export const STOP_SONG = "STOP_SONG"
+export const IS_FETCHING = "IS_FETCHING"
+export const COMPLETE_FETCH = "COMPLETE_FETCH"
+export const COMPLETE_SONG = "COMPLETE_SONG"
