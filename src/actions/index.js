@@ -18,6 +18,12 @@ const startFetch = () => {
   }
 }
 
+export const millisToMinutesAndSeconds = (millis) => {
+    var minutes = Math.floor(millis / 60000);
+    var seconds = ((millis % 60000) / 1000).toFixed(0);
+    return `${minutes}:${(seconds < 10 ? "0" : "")}${seconds}`;
+
+
 const completeFetch = ( data ) => {
   return {
     type: types.COMPLETE_FETCH,
@@ -53,7 +59,7 @@ export const search = ( trackName ) => {
   return ( dispatch, getState ) => {
     dispatch(startFetch());
     let track = new TrackHandler();
-    track.search( trackName, { limit: 5})
+    track.search( trackName, { limit: 5 })
       .then((trackColection) => {
         dispatch(completeFetch(trackColection))
       })

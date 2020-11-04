@@ -36,6 +36,7 @@ class Index extends Component {
                   albumName={ currentValue.album.name }
                   songName={ currentValue.name }
                   artistName={ currentValue.artists[0].name }
+                  duration={ currentValue.duration_ms.name }
                   popularity={ currentValue.popularity }/>
               );
             })}
@@ -46,7 +47,7 @@ class Index extends Component {
   }
   render(){
     const props = this.props;
-    if (props.songs.type == "IS_FETCHING")
+    if (props.songs.type === "IS_FETCHING")
       return(<Spinner name='double-bounce' />);
     return(
       <div className="Index">
@@ -60,7 +61,7 @@ class Index extends Component {
                 value={ this.state.song }
                 placeholder="Song"/>
               <a
-                 className="waves-effect waves-light btn green"
+                 className="waves-effect waves-light btn black"
                  onClick={() => { props.search( this.state.song ) }}>
                 <i className="material-icons left">search</i>
               </a>

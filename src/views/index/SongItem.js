@@ -18,6 +18,7 @@ class SongItem extends Component {
             <h5 className="SongItem-rightBox-songName">{ props.songName }</h5>
             <h6 className="SongItem-rightBox-albumName">{ props.albumName }</h6>
             <h6 className="SongItem-rightBox-artistName">{ props.artistName }</h6>
+            <h6 className="SongItem-rightBox-artistName">{ props.duration }</h6>
           </div>
         </Link>
       </div>
@@ -32,7 +33,8 @@ SongItem.propTypes = {
   songName: PropTypes.string.isRequired,
   artistName: PropTypes.string.isRequired,
   popularity: PropTypes.number.isRequired,
-  tokenPath: PropTypes.string.isRequired
+  tokenPath: PropTypes.string.isRequired,
+  duration: PropTypes.number.isRequired
 }
 
 export default SongItem;
