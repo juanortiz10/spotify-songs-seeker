@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
-import { playTrack, checkSignIn } from '../../actions/index'
+import { playTrack, checkSignIn, millisToMinutesAndSeconds } from '../../actions/index'
 
 import 'materialize-css/dist/css/materialize.min.css'
 import './index.css'
@@ -23,10 +23,10 @@ class Player extends Component {
   render(){
     const props = this.props.player.payload;
     console.log(props);
-    if (this.props.player.type == "COMPLETE_SONG") {
+    if (this.props.player.type === "COMPLETE_SONG") {
       return(
         <div className="Player">
-          <div className="card" style={{ width: '45%'}}>
+          <div className="card" style={{ width: '50%'}}>
             <div className="card-content" style={{display: 'flex'}}>
               <div className="Player-card-leftBox">
                 <img
@@ -39,8 +39,10 @@ class Player extends Component {
                   <source src={ props.preview_url } type="audio/mp3"/>
                     Your browser does not support the audio element.
                 </audio>
-                <h4 className="Player-card-rightBox-song">{ props.name }</h4>
-                <h6 className="Player-card-rightBox-artist">{ props.artists[0].name }</h6>
+                <h6 className="Player-card-rightBox-song">Track Title: { props.name }</h6>
+                <h4 className="Player-card-rightBox-artist">Artist: { props.artists[0].name }</h4>
+                <h2 className="Player-card-rightBox-artist">Duration: { millisToMinutesAndSeconds(props.duration_ms) }</h2>
+                <h2 className="Player-card-rightBox-artist">Album: { props.album.name }</h2>
               </div>
             </div>
           </div>
